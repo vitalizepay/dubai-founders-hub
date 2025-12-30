@@ -29,7 +29,7 @@ export const SectionHeader = ({
       )}
     >
       {badge && (
-        <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-accent bg-accent/10 rounded-full border border-accent/20">
+        <span className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-primary bg-primary/10 rounded-full border border-primary/20">
           {badge}
         </span>
       )}

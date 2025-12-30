@@ -24,12 +24,12 @@ export const FeatureCard = ({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className={cn(
-        "group p-8 rounded-2xl bg-card border border-border/50 hover-lift",
+        "group p-8 rounded-2xl premium-card",
         className
       )}
     >
-      <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-        <Icon className="w-7 h-7 text-accent" />
+      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/15 transition-colors">
+        <Icon className="w-7 h-7 text-primary" />
       </div>
       <h3 className="text-xl font-display font-medium text-foreground mb-3">
         {title}

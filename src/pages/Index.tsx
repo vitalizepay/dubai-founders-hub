@@ -41,10 +41,10 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden cream-section">
         {/* Background Pattern */}
-        <div className="absolute inset-0 pattern-grid opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+        <div className="absolute inset-0 pattern-dots" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background" />
         
         <div className="container-wide relative z-10">
           <div className="max-w-4xl">
@@ -53,13 +53,13 @@ const Index = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-accent bg-accent/10 rounded-full border border-accent/20">
+              <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold text-primary bg-primary/10 rounded-full border border-primary/20">
                 Dubai's Premier Business Ecosystem
               </span>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-medium text-foreground leading-[1.1] mb-6">
                 A Curated Business Ecosystem for{" "}
-                <span className="text-gradient">Indian Founders</span>{" "}
+                <span className="text-primary">Indian Founders</span>{" "}
                 in Dubai
               </h1>
               
@@ -69,13 +69,13 @@ const Index = () => {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/membership">
-                  <Button variant="hero" size="lg" className="group">
+                  <Button variant="premium" size="xl" className="group">
                     Apply for Membership
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
                 <Link to="/investors">
-                  <Button variant="hero-outline" size="lg">
+                  <Button variant="premium-outline" size="xl">
                     Investor Overview
                   </Button>
                 </Link>
@@ -87,14 +87,14 @@ const Index = () => {
         {/* Decorative Element */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.1, scale: 1 }}
+          animate={{ opacity: 0.15, scale: 1 }}
           transition={{ duration: 1.2, delay: 0.3 }}
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent blur-[150px]"
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary blur-[150px]"
         />
       </section>
 
       {/* Four Engines Section */}
-      <section className="section-padding bg-gradient-section">
+      <section className="section-padding">
         <div className="container-wide">
           <SectionHeader
             badge="The IBC Model"
@@ -117,7 +117,7 @@ const Index = () => {
       </section>
 
       {/* Flywheel Section */}
-      <section className="section-padding">
+      <section className="section-padding cream-section">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -126,7 +126,7 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-accent bg-accent/10 rounded-full border border-accent/20">
+              <span className="inline-block px-4 py-2 mb-4 text-sm font-semibold text-primary bg-primary/10 rounded-full border border-primary/20">
                 The Flywheel
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-medium text-foreground leading-tight mb-6">
@@ -138,8 +138,8 @@ const Index = () => {
               
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-lg font-display font-medium text-foreground mb-1">Curated Access</h4>
@@ -147,8 +147,8 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-lg font-display font-medium text-foreground mb-1">Pricing Power</h4>
@@ -156,8 +156,8 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Repeat className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Repeat className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <h4 className="text-lg font-display font-medium text-foreground mb-1">Compounding Value</h4>
@@ -174,14 +174,14 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="aspect-square rounded-3xl bg-card border border-border/50 p-8 md:p-12 flex items-center justify-center">
+              <div className="aspect-square rounded-3xl premium-card p-8 md:p-12 flex items-center justify-center">
                 <div className="relative w-full h-full">
                   {/* Flywheel Visualization */}
-                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-border/50 animate-spin" style={{ animationDuration: "20s" }} />
-                  <div className="absolute inset-8 rounded-full border border-accent/30" />
-                  <div className="absolute inset-16 rounded-full bg-accent/10 flex items-center justify-center">
+                  <div className="absolute inset-0 rounded-full border-2 border-dashed border-primary/20 animate-spin" style={{ animationDuration: "20s" }} />
+                  <div className="absolute inset-8 rounded-full border border-primary/30" />
+                  <div className="absolute inset-16 rounded-full bg-primary/10 flex items-center justify-center">
                     <div className="text-center">
-                      <div className="text-3xl font-display font-semibold text-accent">IBC</div>
+                      <div className="text-3xl font-display font-semibold text-primary">IBC</div>
                       <div className="text-sm text-muted-foreground">Flywheel</div>
                     </div>
                   </div>
@@ -189,7 +189,7 @@ const Index = () => {
                   {["Members", "Credibility", "Demand", "Profit"].map((label, i) => (
                     <div
                       key={label}
-                      className="absolute w-20 h-20 rounded-full bg-card border border-border flex items-center justify-center text-sm font-medium text-foreground"
+                      className="absolute w-20 h-20 rounded-full bg-card border border-border shadow-md flex items-center justify-center text-sm font-medium text-foreground"
                       style={{
                         top: i === 0 ? "0" : i === 2 ? "calc(100% - 80px)" : "50%",
                         left: i === 1 ? "0" : i === 3 ? "calc(100% - 80px)" : "50%",
@@ -207,7 +207,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="section-padding bg-gradient-section">
+      <section className="section-padding">
         <div className="container-wide">
           <SectionHeader
             badge="The Numbers"
@@ -231,16 +231,16 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding">
+      <section className="section-padding cream-section">
         <div className="container-narrow">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center p-12 md:p-16 rounded-3xl bg-card border border-border/50 relative overflow-hidden"
+            className="text-center p-12 md:p-16 rounded-3xl premium-card relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-display font-medium text-foreground mb-4">
                 Join the Ecosystem
@@ -250,12 +250,12 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/membership">
-                  <Button variant="gold" size="lg">
+                  <Button variant="premium" size="lg">
                     Apply for Membership
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button variant="outline" size="lg">
+                  <Button variant="premium-outline" size="lg">
                     Partner with IBC
                   </Button>
                 </Link>
