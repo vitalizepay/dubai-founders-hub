@@ -164,7 +164,7 @@ const Membership = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium text-accent bg-accent/10 rounded-full border border-accent/20">
+              <span className="inline-block px-4 py-2 mb-6 text-sm font-semibold text-primary bg-primary/10 rounded-full border border-primary/20">
                 Meet. Connect. Grow.
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-medium text-foreground leading-[1.1] mb-6">
@@ -177,7 +177,7 @@ const Membership = () => {
                 transactional networking.
               </p>
               <Button
-                variant="hero"
+                variant="premium"
                 size="lg"
                 className="group"
                 onClick={() => setIsFormOpen(true)}
@@ -207,10 +207,10 @@ const Membership = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 rounded-2xl bg-card border border-border/50 hover-lift"
+                className="p-6 rounded-2xl premium-card"
               >
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                  <item.icon className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-display font-medium text-foreground mb-2">
                   {item.title}
@@ -240,14 +240,14 @@ const Membership = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="relative p-8 rounded-2xl bg-card border-2 border-accent/50 hover-lift overflow-hidden"
+              className="relative p-8 rounded-2xl bg-card border-2 border-primary/50 shadow-lg hover-lift overflow-hidden"
             >
-              <div className="absolute top-0 right-0 bg-accent text-accent-foreground px-4 py-1 text-sm font-medium rounded-bl-xl">
+              <div className="absolute top-0 right-0 bg-primary text-primary-foreground px-4 py-1 text-sm font-medium rounded-bl-xl">
                 Limited
               </div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                  <Crown className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Crown className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-xl font-display font-medium text-foreground">
@@ -264,7 +264,7 @@ const Membership = () => {
                   AED 1,500
                 </span>
                 <span className="text-muted-foreground ml-2">/ Year 1</span>
-                <p className="text-sm text-accent mt-1">
+                <p className="text-sm text-primary mt-1">
                   Locked at AED 1,080 from Year 2 onwards
                 </p>
               </div>
@@ -272,14 +272,14 @@ const Membership = () => {
               <div className="space-y-3 mb-8">
                 {foundingBenefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-foreground">{benefit}</span>
                   </div>
                 ))}
               </div>
 
               <Button
-                variant="hero"
+                variant="premium"
                 className="w-full group"
                 onClick={() => {
                   setFormData((prev) => ({
@@ -300,7 +300,7 @@ const Membership = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="p-8 rounded-2xl bg-card border border-border/50 hover-lift"
+              className="p-8 rounded-2xl premium-card"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center">
@@ -336,7 +336,7 @@ const Membership = () => {
               </div>
 
               <Button
-                variant="gold-outline"
+                variant="premium-outline"
                 className="w-full group"
                 onClick={() => {
                   setFormData((prev) => ({
@@ -489,7 +489,7 @@ const Membership = () => {
                 network of Indian business leaders.
               </p>
               <Button
-                variant="hero"
+                variant="premium"
                 size="lg"
                 className="group"
                 onClick={() => setIsFormOpen(true)}
@@ -933,7 +933,7 @@ const Membership = () => {
               ) : (
                 <Button
                   type="submit"
-                  variant="hero"
+                  variant="premium"
                   disabled={
                     !formData.declaration ||
                     !formData.willParticipate ||

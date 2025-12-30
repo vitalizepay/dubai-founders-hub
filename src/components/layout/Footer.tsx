@@ -17,14 +17,14 @@ const footerLinks = {
 
 export const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-card border-t border-border/50">
       <div className="container-wide section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-accent flex items-center justify-center">
-                <span className="font-display font-bold text-accent-foreground text-lg">IBC</span>
+              <div className="w-11 h-11 rounded-xl bg-primary flex items-center justify-center shadow-md">
+                <span className="font-display font-bold text-primary-foreground text-lg">IBC</span>
               </div>
               <span className="font-display text-xl font-medium text-foreground">
                 Indian Business Circle
@@ -34,7 +34,7 @@ export const Footer = () => {
               A curated business ecosystem for Indian founders and professionals in Dubai. 
               Building trusted, long-term business infrastructure that compounds value year over year.
             </p>
-            <p className="text-muted-foreground/60 text-sm mt-6">
+            <p className="text-muted-foreground/70 text-sm mt-6">
               Dubai, United Arab Emirates
             </p>
           </div>
@@ -47,7 +47,7 @@ export const Footer = () => {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-accent transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -64,7 +64,7 @@ export const Footer = () => {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-muted-foreground hover:text-accent transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -75,15 +75,15 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-border/50 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground/60 text-sm">
+        <div className="mt-16 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-muted-foreground/70 text-sm">
             © {new Date().getFullYear()} Indian Business Circle. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground/60">
-            <Link to="/contact" className="hover:text-muted-foreground transition-colors">
+          <div className="flex gap-6 text-sm text-muted-foreground/70">
+            <Link to="/contact" className="hover:text-primary transition-colors">
               Privacy
             </Link>
-            <Link to="/contact" className="hover:text-muted-foreground transition-colors">
+            <Link to="/contact" className="hover:text-primary transition-colors">
               Terms
             </Link>
           </div>

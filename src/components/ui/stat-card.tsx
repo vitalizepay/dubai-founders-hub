@@ -25,16 +25,16 @@ export const StatCard = ({
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className={cn(
-        "p-6 rounded-2xl border",
+        "p-6 rounded-2xl",
         highlight
-          ? "bg-accent/10 border-accent/30"
-          : "bg-card border-border/50",
+          ? "bg-primary/10 border border-primary/30"
+          : "premium-card",
         className
       )}
     >
       <div className={cn(
         "text-4xl md:text-5xl font-display font-semibold mb-2",
-        highlight ? "text-accent" : "text-foreground"
+        highlight ? "text-primary" : "text-foreground"
       )}>
         {value}
       </div>
